@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option csharp_namespace = "Qexal";
+
+package qexal;
+
+service MessagingProvider {
+  rpc SendMessage (SendMessageRequest) returns (SendMessageResponse);
+  rpc GetBalance (GetBalanceRequest) returns (GetBalanceResponse);
+}
+
+message SendMessageRequest {
+  int64 message_id = 1;
+  string from = 2;
+  string to = 3;
+  string body = 4;
+}
+
+message SendMessageResponse {
+  bool success = 1;
+  optional string external_id = 2;
+  optional string error_code = 3;
+  optional string error_message = 4;
+}
+
+message GetBalanceRequest {
+  
+}
+
+message GetBalanceResponse {
+  double balance = 1;
+  string currency = 2;
+}

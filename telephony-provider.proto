@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "Qexal";
+
+package qexal;
+
+service TelephonyProvider {
+  rpc GetRecord (GetRecordRequest) returns (GetRecordResponse);
+  rpc InitiateCall (InitiateCallRequest) returns (InitiateCallResponse);
+}
+
+message GetRecordRequest {
+  string id = 1;
+}
+
+message GetRecordResponse {
+  string url = 1;
+  string error = 2;
+}
+
+message InitiateCallRequest {
+  int32 extension = 1;
+  string phone = 2;
+  string user_id = 3;
+}
+
+message InitiateCallResponse {
+
+}
