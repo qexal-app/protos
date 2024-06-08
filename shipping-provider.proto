@@ -123,6 +123,7 @@ message ShippingRegisterRequest {
   ShippingData shippingData = 11;
   DecimalValue postpaidAmount = 12;
   Package package = 13;
+  int32 fulfillmentId = 14;
 }
 
 message Package {
