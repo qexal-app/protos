@@ -1,0 +1,5 @@
+{
+    "editor.formatOnSave": true,
+    "clang-format.style": "google",
+    "clang-format.executable": "C:\\Users\\vmura\\AppData\\Roaming\\npm\\clang-format"
+}
