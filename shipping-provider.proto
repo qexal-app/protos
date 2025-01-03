@@ -48,7 +48,7 @@ message Address {
 
 message CancelShipmentRequest {
   int32 orderId = 1;
-  int32 fulfillmentId = 2;
+  string fulfillmentId = 2;
 }
 
 message CancelShipmentResponse {
